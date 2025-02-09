@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Masterclass</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+       /* Body Background with Gradient */
+body {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+    color: #333333;  /* Dark Grey for text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Header Text */
+h1, h2, h3, h4, h5, h6 {
+    color: #f4f4f9;  /* Soft White for headers */
+    font-weight: 600;
+}
+
+/* Accent Colors for Buttons and Interactive Elements */
+.btn-primary {
+    background-color: #e09b3a;  /* Vibrant Orange */
+    border: none;
+    color: #f4f4f9;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #29a19c;  /* Bright Teal */
+    color: #fff;
+}
+
+/* Form Field Styling */
+input[type="email"], input[type="password"], .form-control {
+    background-color: #d9d9d9;  /* Light Grey */
+    border: 1px solid #cccccc;
+    color: #333;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Links */
+a {
+    color: #29a19c;  /* Bright Teal */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #82c0cc;  /* Sky Blue for hover effect */
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header-section h1 {
+            font-size: 3rem;
+            color: #0056b3;
+            font-weight: 600;
+        }
+
+        .header-section p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .book-button {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .book-button:hover {
+            background-color: #0056b3;
+        }
+
+        .progress-bar {
+            background-color: #0056b3;
+        }
+
+        .stats-section,
+        .testimonials-section,
+        .cards-section {
+            margin-top: 50px;
+        }
+
+        .stat-card {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            text-align: center;
+            color: #333;
+        }
+
+        .testimonial-card {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            color: #333;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .testimonial-photo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .testimonial-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .linkedin-logo {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+        }
+
+        .testimonial-text {
+            font-size: 0.9rem;
+        }
+
+        .testimonial-rating {
+            font-size: 1.2rem;
+            color: gold;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 350px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #333;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .visible-card {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card .emoji {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .timeline-section {
+            margin-top: 50px;
+            color: #333;
+        }
+
+        .timeline {
+            list-style: none;
+            padding: 0;
+            position: relative;
+        }
+
+        .timeline:before {
+            content: '';
+            background: #007bff;
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin: 20px 0;
+            position: relative;
+            width: 50%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .timeline-item-left {
+            left: 0;
+        }
+
+        .timeline-item-right {
+            left: 50%;
+        }
+
+        .timeline-item:before {
+            content: '';
+            background: #007bff;
+            display: inline-block;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            top: 20px;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item-left:before {
+            left: 100%;
+        }
+
+        .timeline-item-right:before {
+            left: 0;
+        }
+
+        .timeline-item-content {
+            padding: 20px;
+            color: #333;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .timeline-item p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .timeline:before {
+                left: 8px;
+            }
+
+            .timeline-item {
+                width: calc(100% - 30px);
+                margin-left: 30px;
+            }
+
+            .timeline-item-left,
+            .timeline-item-right {
+                left: 0;
+            }
+
+            .timeline-item:before {
+                top: 30px;
+                left: 0;
+                transform: translateX(0);
+            }
+        }
+
+        .book-button-bottom {
+            display: block;
+            margin: 50px auto 0;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .book-button-bottom:hover {
+            background-color: #0056b3;
+        }
+
+        .faq-header {
+            cursor: pointer;
+            background-color: #f0f0f0;
+            color: black;
+            padding: 15px;
+            position: relative;
+            font-size: 1.25rem;
+        }
+
+        .faq-header::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            font-size: 1.5rem;
+            color: black;
+        }
+
+        .faq-header.collapsed::after {
+            content: '+';
+        }
+
+        .faq-header:not(.collapsed)::after {
+            content: '-';
+        }
+
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .modal-title {
+            font-weight: bold;
+        }
+
+        .modal-body h4 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .hhh:hover{
+        z-index: 111;
+        }
+    </style>
+
+    <link rel="stylesheet" href="form.html">
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="header-section">
+            <h1 style="text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);">Golden Stocks <br>by Goldy Ahuja</h1>
+            <p>Learn the science behind personal finance and easily achieve all your financial goals with peace of mind.
+            </p>
+            <p><strong>Date:</strong> 1st August, 4 PM | <strong>Duration:</strong> 1.5 Hours</p>
+            <button class="book-button" data-toggle="modal" data-target="#dataAnalysisModal">Book Your Seat</button>
+            <br><br>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0"
+                    aria-valuemax="100">92.0% sold out!</div>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <h2 class="text-center">Numbers that speak for themselves</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="stat-card hidden">
+                        <h3>2,800+</h3>
+                        <p>Students Enrolled</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card hidden">
+                        <h3>4.8/5</h3>
+                        <p>Avg Ratings</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card hidden">
+                        <h3>1</h3>
+                        <p>Proprietary Financial Tools</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="testimonials-section">
+            <h2 class="text-center">Read Reviews on LinkedIn</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-info">
+                            <img src="https://via.placeholder.com/50" alt="Saurabh Khandelwal"
+                                class="testimonial-photo">
+                            <div>
+                                <strong>Yash Sharma</strong>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
+                                    alt="LinkedIn" class="linkedin-logo">
+                                <p>Senior Business Intelligence Analyst</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">Amazing insights on Retirement Planning, FIRE Number,
+                            Diversification of investment and many more. Definitely recommend this to everyone to get an
+                            overview of personal finance journey.</p>
+                        <div class="testimonial-rating">⭐ 5/5</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-info">
+                            <img src="https://via.placeholder.com/50" alt="Valencio Fernandes"
+                                class="testimonial-photo">
+                            <div>
+                                <strong>Dev pathak</strong>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
+                                    alt="LinkedIn" class="linkedin-logo">
+                                <p>Software Engineer</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">I want to express my sincere appreciation to Sharan for his
+                            exceptional guidance in the realm of finance management.</p>
+                        <div class="testimonial-rating">⭐ 4/5</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-info">
+                            <img src="https://via.placeholder.com/50" alt="Rishab Srikanth" class="testimonial-photo">
+                            <div>
+                                <strong>Nandika Sharma</strong>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
+                                    alt="LinkedIn" class="linkedin-logo">
+                                <p>Product Designer</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">As an absolute beginner to finance, this session has taught me
+                            things I didn't even know was possible.</p>
+                        <div class="testimonial-rating">⭐ 5/5</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-info">
+                            <img src="https://via.placeholder.com/50" alt="Chaitanya Padamati"
+                                class="testimonial-photo">
+                            <div>
+                                <strong>Vivek Rathore</strong>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
+                                    alt="LinkedIn" class="linkedin-logo">
+                                <p>Technical Specialist at Birlasoft</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">I feel managing money is more important than earning money. But I
+                            feel it's not a toughest job after attending 2 hours Master class on Personal Finance with
+                            Sharan!</p>
+                        <div class="testimonial-rating">⭐ 5/5</div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="cards-section">
+            <h1 class="text-center">What You Are Going to Learn</h1>
+            <div class="cards">
+                <div class="card">
+                    <div class="emoji">📊</div>
+                    <h2>Data Analysis</h2>
+                    <p>Gain a clear understanding of complex market mechanisms and terminologies.</p>
+                </div>
+                <div class="card">
+                    <div class="emoji">💼</div>
+                    <h2>Investment Strategies</h2>
+                    <p>Learn the fundamentals of how the market operates, including the roles of operators, traders, and
+                        companies.</p>
+                </div>
+                <div class="card">
+                    <div class="emoji">📈</div>
+                    <h2>Risk Management</h2>
+                    <p>Develop a solid knowledge base for informed investment decisions.</p>
+                </div>
+                <div class="card">
+                    <div class="emoji">🏡</div>
+                    <h2>Wealth Creation</h2>
+                    <p>Discover potential avenues for growth and wealth creation.</p>
+                </div>
+                <div class="card">
+                    <div class="emoji">🛡️</div>
+                    <h2>Investment Protection</h2>
+                    <p>Learn strategies to protect your investments and minimize losses.</p>
+                </div>
+                <div class="card">
+                    <div class="emoji">📅</div>
+                    <h2>Financial Planning</h2>
+                    <p>Take control of your financial future through informed decision-making.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <h2 class="text-center">Steps To Enroll</h2>
+            <ul class="timeline">
+                <li class="timeline-item timeline-item-left">
+                    <div class="timeline-item-content">
+                        <h3>Step 1: Click Book Button</h3>
+                        <p> Click book button to select the specific webinar you are interested.</p>
+                    </div>
+                </li>
+                <li class="timeline-item timeline-item-right">
+                    <div class="timeline-item-content">
+                        <h3>Step 2: Register Your Details</h3>
+                        <p>Fill in the registration form with your personal details.</p>
+                    </div>
+                </li>
+                <li class="timeline-item timeline-item-left">
+                    <div class="timeline-item-content">
+                        <h3>Step 3: Make the Payment</h3>
+                        <p>Complete the payment process through our secure payment gateway.</p>
+                    </div>
+                </li>
+                <li class="timeline-item timeline-item-right">
+                    <div class="timeline-item-content">
+                        <h3>Step 4: Access the Webinar</h3>
+                        <p>Receive the webinar link on the scheduled date and time, click the link to join the live
+                            session.</p>
+                    </div>
+                </li>
+                <li class="timeline-item timeline-item-left">
+                    <div class="timeline-item-content">
+                        <h3>Step 5: Engage and Learn</h3>
+                        <p>Actively participate in the webinar. Take notes, ask questions, and make the most of the
+                            interactive learning experience.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="container-fluid mt-5" style="overflow: hidden;">
+            <center>
+            <h1>Reviews</h1>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card hhh">
+                        <div class="card-body">
+                            <p class="card-text">
+                                "This workshop significantly enhanced my investment strategies. Highly recommended!" -
+                                <strong>Arjun Mehta</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card hhh">
+                        <div class="card-body">
+                            
+                            <p class="card-text">
+                                "Valuable insights and practical advice. Well worth the investment." - <strong>Priya Sharma</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card hhh">
+                        <div class="card-body">
+                            <p class="card-text">
+                                "A must-attend for anyone serious about their financial growth." - <strong>Ravi Patel</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card hhh">
+                        <div class="card-body">
+                            <p class="card-text">
+                                "Exceptional content and expert guidance. Truly beneficial." - <strong>Ananya Iyer</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div></center>
+        </div>
+<br>
+        <div class="container-fluid">
+            <center>
+                <h1>FAQs</h1>
+                <div class="card" style="width: 100%;">
+                    <div class="card-header faq-header collapsed" data-toggle="collapse" data-target="#faq1">
+                        How will I get the link to attend the webinar?
+                    </div>
+                    <div id="faq1" class="collapse">
+                        <div class="card-body">
+                            You will receive your individual google meet link via the email address and WhatsApp number
+                            you
+                            registered with. Reminders will be sent before the webinar. Ensure you do not share the link
+                            with anyone, as only one person can join with one link.
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card" style="width: 100%;">
+                    <div class="card-header faq-header collapsed" data-toggle="collapse" data-target="#faq2">
+                        What is the difficulty level of the concepts taught in the webinar?
+                    </div>
+                    <div id="faq2" class="collapse">
+                        <div class="card-body">
+                            The webinar is designed for beginners with no prior knowledge of the topic.
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card" style="width: 100%;">
+                    <div class="card-header faq-header collapsed" data-toggle="collapse" data-target="#faq3">
+                        How will I receive the webinar materials?
+                    </div>
+                    <div id="faq3" class="collapse">
+                        <div class="card-body">
+                            All necessary materials and resources will be provided during the webinar. You will receive
+                            links and instructions on how to access them.
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card" style="width: 100%;">
+                    <div class="card-header faq-header collapsed" data-toggle="collapse" data-target="#faq5">
+                        Can I access the webinar recording later?
+                    </div>
+                    <div id="faq5" class="collapse">
+                        <div class="card-body">
+                            Yes, participants who purchase the ₹199 pack will have access to the webinar recording for a
+                            limited time.
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card" style="width: 100%;">
+                    <div class="card-header faq-header collapsed" data-toggle="collapse" data-target="#faq6">
+                        What if I have additional questions after the webinar?
+                    </div>
+                    <div id="faq6" class="collapse">
+                        <div class="card-body">
+                            You can reach out to our support team via email or WhatsApp for any further questions or
+                            clarifications.
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </center>
+        </div>
+
+
+
+        <button class="book-button-bottom " style="position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);"
+            data-toggle="modal" data-target="#dataAnalysisModal">Book Your Seat Now</button>
+    </div>
+    <!-- Modal Structure -->
+    <div class="modal fade" id="dataAnalysisModal" tabindex="-1" role="dialog" aria-labelledby="dataAnalysisModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dataAnalysisModalLabel">Important Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <h4 class="mb-3">Register for the live webinar:</h4>
+                    <button class="book-button btn btn-primary mb-4"
+                        onclick="window.location.href='https://superprofile.bio/vp/66a761173740860013085671'">Pay
+                        ₹99</button>
+                    <h4 class="mb-3">Register for the live webinar and access the recording:</h4>
+                    <button class="book-button btn btn-primary"
+                        onclick="window.location.href='https://superprofile.bio/vp/66a7613d3740860013085b21'">Pay
+                        ₹199</button>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hiddenElements = document.querySelectorAll('.hidden');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            hiddenElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            const hiddenCards = document.querySelectorAll('.card');
+            hiddenCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('visible-card');
+                }, 300 * index);
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

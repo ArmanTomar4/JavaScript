@@ -1,0 +1,72 @@
+
+.container-fluid {
+    padding-top: 20px;
+}
+
+.fff {
+    background-color: #4a84d0;
+    border-radius: 10px;
+    color: white;
+    font-family: cursive;
+}
+
+.input-group .form-control {
+    border: 2px solid #007bff;
+}
+
+.input-group .btn-outline-primary {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+}
+
+.input-group .btn-outline-primary:hover {
+    background-color: #0056b3;
+    border: 2px solid #0056b3;
+}
+
+.table {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    table-layout: fixed; /* Ensure table width is fixed */
+}
+
+
+.table th, .table td {
+    vertical-align: middle;
+    border: 1px solid #007bff;
+    word-wrap: break-word; /* Ensure text wraps within cell */
+} 
+
+.table th {
+    background-color: #007bff;
+    color: white;
+    
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e3f2fd;
+    cursor: pointer;
+}
+
+.table .btn-info {
+    background-color: #007bff;
+    border: none;
+}
+
+.table .btn-info:hover {
+    background-color: #0056b3;
+}
+
+.table .btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.table .btn-danger:hover {
+    background-color: #c82333;
+}
+

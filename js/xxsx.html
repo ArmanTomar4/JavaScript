@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    [id=id] ul>li*6.${$}
+    <ul>
+      <li class="1">1</li>
+      <li class="2">2</li>
+      <li class="3">3</li>
+      <li class="4">4</li>
+      <li class="5">5</li>
+      <li class="6">6</li>
+    </ul>
+    ul>li*6.$${$}
+    <ul>
+      <li class="01">1</li>
+      <li class="02">2</li>
+      <li class="03">3</li>
+      <li class="04">4</li>
+      <li class="05">5</li>
+      <li class="06">6</li>
+    </ul>
+    header>nav>div.container^footer
+    <header>
+      <nav>
+        <div class="container"></div>
+      </nav>
+      <footer></footer>
+    </header>
+
+    (header>nav>div.container)+footer
+    <header>
+      <nav>
+        <div class="container"></div>
+      </nav>
+    </header>
+
+    <footer></footer>
+  </body>
+</html>

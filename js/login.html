@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function login() {
+            var username = document.getElementById('Username').value;
+            var pass = document.getElementById('password').value;
+            if (username == "arman" || pass == "018") {
+                alert("ok")
+            }
+            else { alert("wrong username or password") }
+
+        }
+    </script>
+</head>
+
+<body>
+    Username: <br>
+    <input type="text" name="" id="Username">arman
+    <br><br>
+    Password: <br>
+    <input type="password" name="" id="password">018
+    <br><br>
+
+    <button onclick="login()">Submit</button>
+</body>
+
+</html>

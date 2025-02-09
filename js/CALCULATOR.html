@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css" />
+</head>
+
+<body>
+    <center>
+        <div id="a" class="calculator">
+            <form >
+               <input type="text" name="answer" class="cal" readonly/>  
+                <br /><br />
+                <input class="butt" onclick="answer.value += '1'" type="button" value="1" />
+                <input class="butt" onclick="answer.value += '2'" type="button" value="2" />
+                <input class="butt" onclick="answer.value += '3'" type="button" value="3" />
+                <br /><br />
+                <input class="butt" onclick="answer.value += '4'" type="button" value="4" />
+                <input class="butt" onclick="answer.value += '5'" type="button" value="5" />
+                <input class="butt" onclick="answer.value += '6'" type="button" value="6" />
+                <br /><br />
+                <input class="butt" onclick="answer.value += '7'" type="button" value="7" />
+                <input class="butt" onclick="answer.value += '8'" type="button" value="8" />
+                <input class="butt" onclick="answer.value += '9'" type="button" value="9" />
+                <br /><br />
+                <input class="butt" onclick="answer.value += '+'" type="button" value="+" />
+                <input class="butt" onclick="answer.value += '-'" type="button" value="-" />
+                <input class="butt" onclick="answer.value += '/'" type="button" value="/" />
+                <br /><br />
+                <input class="butt" onclick="answer.value += '0'" type="button" value="0" />
+                <input class="butt" onclick="answer.value += '*'" type="button" value="*" />
+                <input class="butt" onclick="answer.value = eval(answer.value) " type="button" value="=" />
+                <br /><br />
+                <input class="butt" id="clearbutton" onclick="answer.value = '' " type="button" value="Clear" />
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>

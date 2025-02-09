@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Masterclass Payment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+            body {
+            background: linear-gradient(135deg, #ffffff, #ffffff);
+            background-size: 300% 300%;
+            animation: gradientAnimation 15s ease infinite;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            color: black;
+            padding: 30px;
+            max-width: 700px;
+            margin-top: 50px;
+        }
+        .form-control {
+            background-color: #ffecb3;
+            color: black;
+            border: 1px solid #ffb300;
+        }
+        .form-control:focus {
+            background-color: #ffe082;
+            border-color: #ffa000;
+            box-shadow: none;
+        }
+        .btn {
+            background-color: #469ff8fe;
+            color: white;
+            border: none;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #6cb1f5fe;
+        }
+        .card {
+            background-color: #fff3e0;
+            border: none;
+        }
+        .card-body {
+            background-color: #ffe0b2;
+            color: black;
+        }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4">Golden Stocks <br>by Goldy Ahuja| 14th July, 2024</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="paymentForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+                        <div class="invalid-feedback">
+                            Please enter your name.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter Phone" required pattern="[0-9]{10}">
+                        <div class="invalid-feedback">
+                            Please enter a valid phone number.
+                            </div>
+                        </div>
+                    <button type="submit" class="btn btn-block" onclick="window.location.href='https://superprofile.bio/vp/66a761173740860013085671'">Pay ₹99</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <img src="path_to_your_image.jpg" alt="Masterclass" class="img-fluid mb-3">
+                <p>Learn the science behind personal finance and achieve all your financial goals with ease.</p>
+                <p><strong>Date of Webinar:</strong> 14th July, 2024</p>
+                <p><strong>Time of Webinar:</strong> 4:00 PM</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var form = document.getElementById('paymentForm');
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
+    </script>
+</body>
+</html>

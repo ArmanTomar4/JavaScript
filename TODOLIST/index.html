@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO LIST</title>
+    <link rel="stylesheet" href="TODOLIST.CSS" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" /> -->
+    <style>
+        /* body {
+            background: linear-gradient(135deg, #4284ca, #ffffff);
+            background-size: 300% 500%;
+            animation: gradientAnimation 5s ease infinite;
+            font-family: serif;
+        } */
+
+        body {
+            background:  linear-gradient(135deg, #4284ca, #ffffff);
+            background-size: 300% 500%;
+            animation: gradientAnimation 5s ease infinite;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        @keyframes gradientAnimation{
+            0%{
+                background-position: 0 50%;
+
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0% 50%;
+            }
+        }
+        /* @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;    
+            }   
+        } */
+    </style>
+</head>
+
+<body>
+    <center>
+
+    <div class="container-fluid">
+        <div
+            class="container fff">
+            <h1 class="text-center">To Do List</h1>
+        </div>
+        
+        <div class="gggg">
+            <div class="mx-auto mt-5" style="max-width: 700px">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter Text" id="username" />
+                    <button type="button" class="btn btn-outline-primary" id="addUser">
+                        Add Text
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--container end-->
+    </div>
+    <!--container-fluid end -->
+    <div class="container-fluid hhhhh">
+
+    <div class="display">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Your Name</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="records"></tbody>
+        </table>
+    </div>
+</div>
+</center>
+    <script src="TODOLIST.JS"></script>
+</body>
+
+</html>
